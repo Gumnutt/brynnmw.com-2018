@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Brynn's ToDo List</title>
+
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <!-- Internal CSS -->
+  <link rel="stylesheet" href="css/scss/style.css">
+  
+
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900" rel="stylesheet">
+  
+</head>
+<body>
+<section id="gridlines">
+  <div class="column-container">
+    <div class="column col-md-1"></div>
+    <div class="column col-md-1"></div>
+    <div class="column col-md-1"></div>
+    <div class="column col-md-1"></div>
+    <div class="column col-md-1"></div>
+    <div class="column col-md-1"></div>
+    <div class="column col-md-1"></div>
+    <div class="column col-md-1"></div>
+    <div class="column col-md-1"></div>
+    <div class="column col-md-1"></div>
+    <div class="column col-md-1"></div>
+    <div class="column col-md-1"></div>
+  </div>
+</section>
+
+
+<section class="content">
+    <!-- Name -->
+  <div class="name col-md-offset-2">
+    <div class="title">
+      <h1>Brynn McGarry Watson</h1>
+      <h3>Web Developer &amp; Graphic Designer</h3>
+    </div>
+  </div>
+
+    <!-- First section -->
+    <div class="inner-content left-content">
+      <div class="image-container col-md-offset-2 col-md-4">
+        <img src="img/001.jpg">
+      </div>
+      <div class="project-titled col-md-4" id="project-1">
+        <h2 class="project-title" id="title-1">Project 1</h2>
+        <p>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar.</p>
+      </div>
+    </div>
+
+    <!-- Second section -->
+    <div class="inner-content right-content">
+      <div class="project-titled col-md-offset-2 col-md-4" id="project-2">
+        <h2 class="project-title" id="title-2">Project 2</h2>
+        <p>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar.</p>
+      </div>
+      <div class="image-container col-md-4">
+        <img src="img/003.jpg">
+      </div>
+    </div>
+
+</section>
+
+<script type="text/javascript">
+  window.sr = ScrollReveal();
+
+  var revealer = {
+    origin   : "left",
+    distance : "0",
+    duration : 1500,
+    scale    : 1,
+    reset    : true,
+    delay    : 100,
+  }
+
+  sr.reveal('.title', revealer);
+  sr.reveal('.left-content', {
+    beforeReveal: function(el) {
+      $('#project-1').addClass('blockRevealer');
+      $('#project-1').removeClass('revealer-hidden');
+    },
+    afterReset: function(el){
+      $('#project-1').addClass('blockRevealer revealer-hidden');
+    },
+    origin   : "left",
+    distance : "0",
+    duration : 1500,
+    scale    : 1,
+    reset    : true,
+    delay    : 100,
+  });
+  sr.reveal('.right-content', {
+    beforeReveal: function(el) {
+      $('#project-2').addClass('blockRevealer');
+      $('#project-2').removeClass('revealer-hidden');
+    },
+    afterReset: function(el){
+      $('#project-2').addClass('blockRevealer revealer-hidden');
+    },
+    origin   : "left",
+    distance : "0",
+    duration : 1500,
+    scale    : 1,
+    reset    : true,
+    delay    : 100,
+  });
+  
+
+</script>
+</body>
+</html>
